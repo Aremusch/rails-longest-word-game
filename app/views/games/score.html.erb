@@ -1,0 +1,7 @@
+<div class="mx-5">
+<h1>Score</h1>
+<p><%=params[:word]%></p>
+<%=@score ? "Congratulation #{params[:word]} can be buit from #{params[:letters]}" : "Bad luck #{params[:word]} wasn't a good guess" %><br>
+<%= link_to "⬅️ Replay", new_path %>
+<%= hidden_field_tag :letters, @letters %>
+</div>
